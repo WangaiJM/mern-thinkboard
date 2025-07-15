@@ -6,8 +6,10 @@ const port = process.env.PORT || 5001;
 
 const app = express();
 
-connectDB();
+app.use(express.json());
 
 app.use("/api/notes", notesRoutes);
 
-app.listen(port, () => console.log(`Listening to port ${port}`));
+connectDB().then(() => {
+  app.listen(port, () => console.log(`Listening to port ${port}`));
+});
