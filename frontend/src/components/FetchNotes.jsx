@@ -29,8 +29,8 @@ const FetchNotes = () => {
       {loading && <Spinner />}
       <main className="notes">
         {notes.map((note) => (
-          <div className="notes__card">
-            <h3 key={note._id}>
+          <div key={note._id} className="notes__card">
+            <h3>
               <a href="">{note.title}</a>
             </h3>
           </div>

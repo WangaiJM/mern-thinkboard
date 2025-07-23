@@ -1,4 +1,12 @@
+import CreateNote from "../components/CreateNote";
+import NavBar from "./../components/NavBar";
+
 const CreatePage = () => {
-  return <div>CreatePage</div>;
+  return (
+    <div>
+      <NavBar />
+      <CreateNote />
+    </div>
+  );
 };
 export default CreatePage;
