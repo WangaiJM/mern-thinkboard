@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Spinner from "./Spinner";
+import FormatDate from "../utils/FormatDate";
 
 import "./FetchNotes.css";
 
@@ -31,8 +32,11 @@ const FetchNotes = () => {
         {notes.map((note) => (
           <div key={note._id} className="notes__card">
             <h3>
-              <a href="">{note.title}</a>
+              <a href={`/note/${note._id}`}>{note.title}</a>
             </h3>
+            <span>
+              <FormatDate createDate={note.createdAt} />
+            </span>
           </div>
         ))}
       </main>

@@ -10,7 +10,7 @@
   flex-wrap: wrap;
 }
 .notes__card {
-  flex: 1;
+  flex: 1 1 calc(33.333% - 2rem);
   padding: 12px;
   color: aliceblue;
   border-radius: 8px;
